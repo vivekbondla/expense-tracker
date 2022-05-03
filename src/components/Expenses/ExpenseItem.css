@@ -1,0 +1,64 @@
+.expense-item{
+    /* Flex used to display elements side by side */
+    display: flex; 
+    /* justify-content space-between will give spaces b/t divs; */
+    justify-content: space-between;
+    align-items: center;
+    /* paddin used to give space inside a div like distance from corners */
+    padding: 0.5rem;
+    /* margi-n will provide margi-n around(b/w) the div(here card) If the margin property has four values:
+    margin: 25px 50px 75px 100px;
+top margin is 25px
+right margin is 50px
+bottom margin is 75px
+left margin is 100px */
+    margin: 1rem 0;
+    background-color: #4b4b4b;
+
+}
+.expense-item__description{
+    display: flex;
+    /* flexdirection will adjust the elements in specific directions here it will adjust one below another */
+    flex-direction: column;
+    /* gap- is used to give gap- b/w elements */
+    gap:1rem;
+    /* flexend option used to align items at end of div */
+    align-items: flex-end;
+    /* columnreverse option will reverse the elements */
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    flex:1;
+}
+.expense-item h2{
+    /* color: #3a3a3a; */
+    /* fontsize-1rem will define the size of the font; */
+    font-size: 1rem;
+    flex:1;
+    margin: 0 1rem ;
+    color: white;
+}
+.expense-item__price{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #40005d;
+    border: 1px solid white;
+    padding: 0.4rem;
+    border-radius: 12px;
+}
+
+@media(min-width:580px){
+    .expense-item__description{
+        flex-flow: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex:1;
+    }
+    .expense-item__description h2{
+        font-size: 1.25rem;
+    }
+    .expense-item__price{
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
